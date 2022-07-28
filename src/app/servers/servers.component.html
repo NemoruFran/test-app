@@ -1,2 +1,13 @@
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
+
+
+<!--
+    Basicamente, cuando nosotros estamos haciendo property binding, lo que hacemos es 
+    asignar codigo de nuestro componente a la propiedad. Que significa esto? que cuando hacemos 
+    [property] = "", podemos poner el codigo que queramos dentro mientras el resultado final sea
+    un objeto del tipo que la property quiere. Esto tiene infinidad de utilidades y asi es como podrias
+    cargar una imagen, poner el texto de forma dinamica en un span, etc. Es super guay!
+-->
