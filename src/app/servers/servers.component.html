@@ -10,8 +10,7 @@
 <!--<ng-template #noServer>
     <p>No server was created!</p>
 </ng-template>-->
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 
 <!--; else noServer en ngIf hace que en caso de no cumplirse la condicion use la template html descrita dentro de
       la ng-template class con atributo #noServer
