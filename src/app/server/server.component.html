@@ -1,1 +1,5 @@
-<p>Server with ID {{serverId}} is {{getServerStatus()}}</p>
+<p [ngStyle]="{'background-color': getServerStatus()==='Online' ? 'green' : 'red'}">Server with ID {{serverId}} is {{getServerStatus()}}</p>
+
+<!-- Tecnicamente de esta forma podrias crear funciones que devolvieran templates de style css en forma de json y asi poder 
+    ir discriminando
+-->

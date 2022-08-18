@@ -5,10 +5,17 @@
 <!--<p>{{ serverName }}</p>-->
 <button name="but" id="but" class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
 <!--<p [innerText]="allowNewServer"></p>-->
-<p>{{serverCreationStatus}}</p>
+<!--<p>{{serverCreationStatus}}</p>-->
+<p *ngIf="serverCreated">{{"Server was created! Name is " + this.serverName}}</p>
+<!--<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>-->
 <app-server></app-server>
 <app-server></app-server>
 
+<!--; else noServer en ngIf hace que en caso de no cumplirse la condicion use la template html descrita dentro de
+      la ng-template class con atributo #noServer
+-->
 
 <!--
     Basicamente, cuando nosotros estamos haciendo property binding, lo que hacemos es 
